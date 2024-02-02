@@ -10,19 +10,20 @@
 
 #### Areas of Mastery
 
-- **CSS Layout Techniques**: 
-- **Responsive Design**: 
-- **Styling Elements**: 
+- **CSS Layout Techniques**:
+- **responsive design**:
 
 #### Challenges Faced
 
-- **Responsive Design for Smaller Screens**:
-- **Hover and Focus Effects**: 
+- **layouts, using div classes to override other divs**:
+: 
 
 #### Areas for Improvement
 
-- **Advanced CSS Properties**: 
+- **css Layouts**: 
 - **Code Optimization**: 
 - **Creative Design Choices**:
 
 #### Overall Learning Experience
+
+i felt this assignment was a bit much for the given time, with more time i wouldve had better understandig of the content.
