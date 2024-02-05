@@ -14,7 +14,7 @@ button{
 }
 
 .container{
-    margin: 50px;
+    margin: 50px;         
     text-align: end;
     width: max-content;
 }
@@ -25,7 +25,7 @@ button{
     grid-auto-rows:repeat(12 minmax(1px, 1fr)) ;
 
 }
-
+                    /*layout for all user settings and bio*/
 .profile-image{
     grid-column: 1/1;
     grid-row: 1/12;   
@@ -49,7 +49,7 @@ button{
 }
 
 
-.profile-bio{
+.profile-bio{             /*layout for the profile bio
     grid-column: 2/12;
     grid-row: 9/10;
     text-align: start;
@@ -58,21 +58,22 @@ button{
 .gallery{
     margin:5px;
     display: grid;
-    grid-template-columns: 2 400px;    
+    grid-template-columns: 2 400px; /*  Layoutfor all images except profile image.*/ 
     grid-row: 6;
    
 }
-.gallery-item{
+.gallery-item{      /*layout for the images in this class*/
  grid-column: 1;
  grid-row:auto;
 }
 
-.gallery-item2{
-    grid-column: 2;
+.gallery-item2{      
+    grid-column: 2; /*layout for the images in this class*/
  grid-row:auto;
+ flex: content;
     }
 
-.gallery-image{
+.gallery-image{     /*styiling for all images except the profile image*/
  height: 300px;
  width: 400px;
  margin:10px;
