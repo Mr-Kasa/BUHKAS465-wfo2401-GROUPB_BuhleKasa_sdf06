@@ -2,12 +2,18 @@
 :root {
     margin:10px;
     background-color: beige;
-    --background-color: beige;
-    
+    --background-color: beige;              /*variables*/
+    --2ndbckrnd-color:antiquewhite;
 }
+@media screen and (min-width: 50px) and (max-width: 1024){         /*minimum screensize set*/
+    .profile {
+        display: flex;
+        flex-wrap: wrap;}}
 header{
-    background-color: antiquewhite;
-    background-size: 100%;
+    background-color: var(--2ndbckrnd-color);
+    background-size:contain;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 img {
     display: block;
@@ -33,7 +39,8 @@ button{
 .container{
     margin: 50px;         
     text-align: end;
-    width: max-content;
+    width:max-content;
+    background-color: var(--2ndbckrnd-color);
 }
 
 .profile{
@@ -49,13 +56,13 @@ button{
     margin-left: 50px;
 }
 .profile-image img{
-    border-radius: 50%;
+    border-radius: 50%;             
     border: black solid;
     
 }
 .profile-user-settings{
     
-    grid-column: 3/20;
+    grid-column: 3/auto;          /*user setting layout eg buttons and name*/
       grid-row: 3/4;
     
       display: flex;
@@ -63,14 +70,14 @@ button{
         
 }
 .profile-user-name{
-margin: 5px;
+margin: 5px;                /*username specifications*/
 font-size: 20px;
 }
 
-.profile-stats{
+.profile-stats{                 /*layout for profile stats*/
     cursor: pointer;
     grid-column: 2/12;
-    grid-row: 5/6;
+    grid-row: 8;
     li{
     display:inline-block;
     padding-right: 1px;
@@ -80,7 +87,7 @@ font-size: 20px;
     }
   
 }
-.profile-stat-count{
+.profile-stat-count{                /*spacing for likes and comment stats*/
   margin-right: 2px;
 }
 .profile-bio{             /*layout for the profile bio*/
@@ -89,20 +96,68 @@ font-size: 20px;
     text-align: start;
     font-size: 20px;
 }
-.gallery{
-    margin:5px;
-    display: inline-flex 1 1 1;
-  /*  grid-template-columns: 2 400px; /*  Layoutfor all images except profile image.*/ 
-   /* grid-row: 6;*/
-   
+.gallery{                                       /*layour for the gallery*/
+    
+    display: grid;
+    grid-template-columns: 450px 450px 450px;
+    grid-auto-rows: max-content;
+    grid-gap:15px;
+    background-color: var(--2ndbckrnd-color);
+    overflow: hidden;
+    align-items: center;
+    
 }
-.gallery-item{      /*layout for the images in this class*/
- /*grid-column: auto;
- grid-row:auto;*/
- 
+.gallery-item{                              /*specs for the image and likes/comment container*/
+    border: rgb(238, 238, 191) solid; 
+    overflow: hidden;
+    background-color: azure;
+    margin: 5px;
+    height:fit-content
 }
 .gallery-image{     /*styiling for all images except the profile image*/
  height: 300px;
  width: 400px;
  margin:10px;
+ border: bisque solid;
+ border-radius: 25%;
+ border-width: 4px;
 }
+
+.gallery-item-info{        /*gallery info postioning/layout*/
+    li{
+ display: flex;
+ flex-direction: row;
+ 
+}
+}
+.gallery-item:hover .gallery-item-info,    /*gallery item hover effcts and focus*/
+.gallery-item:focus .gallery-item-info {
+    display: flex;                            
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: xx-large;
+}
+.profile-stat-count:hover{
+         font-size: xx-large;
+         color: orange;
+}
+
+.loader {
+    width: 5rem;
+    height: 5rem;                           /* loaderspecs*/
+    border: 0.6rem solid #999;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: loader 500ms linear infinite;
+}
+
+@keyframes loader {
+    to {
+        transform: rotate(360deg);          /*loader animation frames*/
+    }
+}
+
